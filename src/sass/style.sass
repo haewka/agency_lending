@@ -1,0 +1,76 @@
+@import '_variables.sass'
+.header
+    height: 60px
+    .nav
+        position: fixed
+        width: 100%
+        height: 60px
+        background-color: $black-color
+        .nav__block 
+            width: 100%
+            height: 60px
+            &_content
+                width: 40%
+                margin: 0 auto
+                height: 100%
+                display: flex
+                justify-content: space-around
+                align-items: center
+                &_button
+                    height: 100%
+                    margin: 0 auto
+                    display: flex
+                    align-items: center
+                    &_item
+                        margin-left: 24px
+                        margin-right: 24px
+                        font-size: 14px
+                        text-transform: uppercase
+                        a
+                            text-decoration: none
+                            color: #e0e0e0
+.organisation
+    background-color: $grey-color
+    min-height: 688px
+    padding: 103px 0 111px 0
+    &__content
+        display: flex
+        justify-content: space-around
+        align-items: center
+    &__text
+        margin-right: 112px
+        margin-bottom: 12px
+    &__title
+        margin: 0
+        margin-top: 5px
+        font-size: 60px
+        font-weight: 800
+        letter-spacing: 6px
+        text-align: left
+        color: #000000
+        text-transform: uppercase
+    &__descr
+        margin-top: 36px
+        font-size: 16.5px
+        text-align: left
+        color: rgba(0, 0, 0, 0.7)
+    &__button
+        margin-top: 56px
+        width: 227px
+        height: 55px
+        border-radius: 5px
+        border: none
+        background-color: $red-color
+        font-size: 18.5px
+        color: white
+        &:hover
+            background-color: red
+            box-shadow: 2px 2px 2px 2px rgba(0,0,0, 0.3)
+        &:focus
+            outline: none
+    &__video
+        width: 551px
+        height: 356px
+        box-shadow: -2.2px -13.8px 73px 0 rgba(0, 0, 0, 0.29)
+
+
