@@ -1,4 +1,7 @@
 @import '_variables.sass'
+@import '_lines.sass'
+@import '_buttons.sass'
+@import '_inputs.sass'
 .header
     height: 60px
     .nav
@@ -59,14 +62,6 @@
         color: rgba(0, 0, 0, 0.7)
     &__button
         margin-top: 56px
-        width: 227px
-        height: 55px
-        border-radius: 5px
-        border: none
-        background-color: $red-color
-        font-size: 18.5px
-        font-weight: bold
-        color: white
         &:hover
             box-shadow: 2px 2px 2px 2px rgba(0,0,0, 0.3)
             text-shadow: rgba(0, 0, 0, 0.3) 1px 1px 2px
@@ -99,15 +94,6 @@
                 color: #000000
             &_button
                 margin-top: 58px
-                width: 227px
-                height: 55px
-                border-radius: 5px
-                border: solid 2px #ff0000
-                background-color: white
-                font-size: 18.5px
-                font-weight: bold
-                letter-spacing: 0.46px
-                color: $red-color
                 &:hover
                     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3)
                     text-shadow: rgba(250, 0, 0, 0.3) 1px 1px 2px
@@ -147,4 +133,273 @@
                 margin-top: 49px
             .left_block
                 margin-right: 50px
+    &__bottom-line
+        width: 100%
+        height: 2px
+        background-color: #ececec
+        margin-top: 107px
+.feature
+    margin-top: 106px
+    min-height: 1020px
+    &__title
+        text-align: center
+        font-size: 41.5px
+        font-weight: bold
+        letter-spacing: 0.42px
+        color: rgba(0, 0, 0, 0.8)
+        text-transform: uppercase
+    &__subtitle
+        text-align: center
+        margin: 0 auto
+        margin-top: 34px
+        font-size: 16.5px
+        font-weight: normal
+        color: rgba(0, 0, 0, 0.7)
+    &__line 
+        margin: 0 auto
+        margin-top: 29px
+        width: 132px
+        height: 3px
+        background-color: $red-color
+    &__items_titles
+        display: flex
+        justify-content: space-around
+        margin-top: 88px
+        text-transform: uppercase
+        &-title
+            font-size: 22px
+            font-weight: 600
+            letter-spacing: 0.22px
+            color: rgbd(0, 0, 0, 0.7)
+    &__items_content
+        margin-top: 66px
+        display: flex
+        justify-content: space-between
+        align-items: start
+        flex-wrap: wrap
+        &-img
+            width: 270px
+            height: 290px
+            margin-bottom: 19px
+            img
+                width: 100%
+                height: 100%
+    &__bottom-line
+        margin-top: 60px
+.meet
+    margin-top: 60px
+    padding-bottom: 100px
+    &__title
+        font-size: 41.5px
+        font-weight: bold
+        color: rgba(0, 0, 0, 0.8)
+        letter-spacing: 0.42px
+    &__subtitle
+        margin-top: 40px
+        font-size: 16.5px
+        color: rgba(0, 0, 0, 0.7)
+    &__line
+        margin: 0
+        margin-top: 33px
+    &__content
+        margin-top: 69px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &_big_photo
+            width: 321px
+            height: 458px
+            margin-right: 74px
+            img
+                width: 100%
+                height: 100%
+        &_descr
+            &_name
+                font-size: 30.5px
+                font-weight: 600
+                letter-spacing: 0.31px
+                color: rgba(0, 0, 0, 0.8)
+                text-transform: uppercase
+            &_info
+                margin-top: 35px
+                font-size: 16.5px
+                color: rgba(0, 0, 0, 0.7)
+            &_links
+                margin-top: 44px
+                display: flex
+                justify-content: start
+                &_link
+                    margin-right: 30px
+                    font-size: 18px
+                    color: rgba(0, 0, 0, 0.8)
+                    letter-spacing: 0.9px
+                    a
+                        color: rgba(0, 0, 0, 0.8)
+                        text-decoration: none
+            &_photos
+                margin-top: 45px
+                display: flex
+                justify-content: space-between
+                &_personal-photo
+                    margin-right: 20px
+                    width: 196px
+                    height: 214px
+                    &:nth-last-child(1)
+                        margin-right: 0                        
+                    img
+                        width: 100%
+                        height: 100%
+.subscribe
+    min-height: 512px
+    padding: 140px 0 140px 0
+    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) ), url('../img/konoha_bg.jpg') center no-repeat
+    &__title
+        margin: 0 auto
+        color: white
+        opacity: 0.8
+        font-size: 42px
+        font-weight: bold
+        letter-spacing: 1.05px
+        text-align: center
+    &__subtitle
+        margin: 0 auto
+        margin-top: 31px
+        color: white
+        font-size: 16.5px
+        opacity: 0.8
+        text-align: center
+    &__form
+        margin-top: 62px
+        form
+            margin-left: 172px
+        input
+            margin: 0 auto
+            width: 521px
+            height: 79px
+            padding: 5px 20px 5px 20px
+            border-radius: 20px
+        button
+            margin-left: 22px
+            text-transform: uppercase
+            width: 214px
+            height: 79px
+            border-radius: 20px
+.touch
+    min-height: 985px
+    &-content
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        &-one
+            margin-left: 164px
+            width: 731px
+        &-two
+            width: 575px
+            height: 481px
+            background-color: #2d2d2d
+    &__title
+        margin-top: 106px
+        font-size: 41.5px
+        font-weight: bold
+        letter-spacing: 0.42px
+        color: rgba(0, 0, 0, 0.8)
+        text-transform: uppercase
+    &__subtitle
+        width: 720px
+        margin-top: 51px
+        font-size: 16.5px
+        color: rgba(0, 0, 0, 0.7)
+        text-align: left
+    &__bottom-line
+        margin: 0
+        margin-top: 54px
+    &__content
+        margin-top: 75px
+        &_form
+            display: flex
+            justify-content: space-between
+            flex-wrap: wrap
+            &_name
+                width: 339px
+                height: 69px
+                padding:  5px 20px 5px 20px
+                color: rgba(0, 0, 0, 0.7)
+                font-size: 18.5px
+                border-radius: 5px
+                margin-right: 54px
+            &_email
+                width: 333px
+                height: 69px
+                padding:  5px 20px 5px 20px
+                color: rgba(0, 0, 0, 0.7)
+                font-size: 18.5px
+                border-radius: 5px
+            &_message
+                margin-top: 46px
+                width: 731px
+                height: 249px
+                padding:  5px 20px 5px 20px
+                color: rgba(0, 0, 0, 0.7)
+                font-size: 18.5px
+                border-radius: 5px
+            &_button
+                margin-top: 45px
+                width: 728px
+                height: 72px
+                text-transform: uppercase
+        &_contact
+            background-color: #2d2d2d
+            padding: 145px 0px 0px 79px
+            &_info
+                font-size: 18.5px
+                letter-spacing: 0.46px
+                font-weight: bold
+                color: rgba(255, 255, 255, 0.8)
+                text-transform: uppercase
+            &_address
+                margin-top: 41px
+                font-size: 16px
+                color: rgba(255, 255, 255, 0.8)
+            &_email
+                margin-top: 27px
+                font-size: 16px
+                color: rgba(255, 255, 255, 0.8)
+            &_number
+                margin-top: 33px
+                font-size: 16px
+                color: rgba(255, 255, 255, 0.8)
+                a
+                    text-decoration: none
+                    color: rgba(255, 255, 255, 0.8)
+.footer
+    background-color: #313030
+    padding: 57px 0px 37px 0px
+    &__content
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &_license
+            font-size: 16px
+            color: #b8b8b8
+        &_social
+            &_links
+                display: flex
+                justify-content: space-between
+                align-items: center
+                &-item
+                    width: 33px
+                    height: 33px
+                    margin-right: 18px
+                    border-radius: 20px
+                    &:nth-last-child(1)
+                        margin-right: 0
+                    a
+                        img
+                            width: 33px
+                            height: 33px
+
+                        
+
+
+
 
