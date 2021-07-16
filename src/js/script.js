@@ -68,16 +68,50 @@ scrollOnNav();
     productsItemUser = document.querySelector('.feature__items_content-user'),
     productsItemMock = document.querySelector('.feature__items_content-mock'); */
 
-/* function productsItems(title) {
-    if(title.classList.contains('feature__items_titles-title-active')) {
+
+
+
+/* function tabsActive(){
+    let activeTitle = document.getElementsByClassName('feature__items_titles-title-active');
+    productsTitle.forEach((i) => {
+        i.addEventListener('click',function() {
+            let currentActive = activeTitle[0];
+            if(currentActive) {
+                currentActive.classList.remove('feature__items_titles-title-active');
+            } 
+            if(currentActive !== this) {
+                this.classList.add('feature__items_titles-title-active');
+            }
+        });
         
+    });
+}
+
+tabsActive(); */
+
+function tabs(){
+    const productsTitle = document.querySelectorAll('.feature__items_titles-title'),
+        productsItem = document.querySelectorAll('.feature__items_content');
+    let tabName;
+    productsTitle.forEach((titleItem) => {
+        titleItem.addEventListener('click',selectTitle);
+    });
+    function selectTitle(){
+        productsTitle.forEach((item) => {
+            item.classList.remove('feature__items_titles-title-active');
+            this.classList.add('feature__items_titles-title-active');
+            tabName = this.getAttribute('data-tab-name');
+            selectContent(tabName);
+        });
     }
-} */
-
-const productsTitle = document.querySelectorAll('.feature__items_titles-title'),
-    productsItem = document.querySelectorAll('.feature__items_content');
-
-productsTitle.forEach((i) => {
-    console.log(i);
-});
-
+    function selectContent(tabName) {
+        productsItem.forEach(i => {
+            if(i.classList.contains(tabName)){
+                i.classList.add('feature__items_content-active');
+            } else {
+                i.classList.remove('feature__items_content-active');
+            }
+        });
+    }
+}
+tabs();
